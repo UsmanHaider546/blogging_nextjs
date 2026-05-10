@@ -1,5 +1,7 @@
 # Next.js Blogging Platform
 
+## 📺 Project Overview & Demo (YouTube)
+
 [![Next.js Blogging Platform Intro Video](https://img.youtube.com/vi/LcVgiDSmtQ0/maxresdefault.jpg)](https://youtu.be/LcVgiDSmtQ0)
 
 *A robust, SEO-optimized static blogging platform built leveraging the Next.js App Router.*
