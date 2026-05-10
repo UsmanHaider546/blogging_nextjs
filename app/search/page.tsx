@@ -7,8 +7,6 @@ import { House, MoveRight, ShieldAlert } from 'lucide-react';
 import ShareButtons from '@/components/ShareButtons';
 import { GetSearchPosts } from '@/lib/Fetch/UniversalFetcher';
 
-/* eslint-disable */
-
 export default async function SearchPage({ searchParams }:string|any) {
   const resolvedParams = await searchParams || {};
   const mySearch = resolvedParams.search || "";
@@ -135,47 +133,48 @@ export default async function SearchPage({ searchParams }:string|any) {
   );
 }
 
-
 export async function generateMetadata() {
-  const canonicalURL= `/search`;
+  const canonicalURL = `/search`;
+  const title = 'Search Results - Fair Explain';
+  const description = 'Search for quality market content and trends on Fair Explain.';
+  
   return {
-    title: 'Search Page',
-    description: 'Welcome to the home page of our website. Explore our latest posts and updates.',
+    title,
+    description,
     alternates: {
       canonical: canonicalURL,
     },
     robots: {
-      index: true,
+      index: false,
       follow: true,
       nocache: false,
       googleBot: {
-        index: true,
+        index: false,
         follow: true,
         noimageindex: false,
       },
     },
     openGraph: {
-      title: "pageMeta.title",
-      description:"pageMeta.description",
+      title,
+      description,
       url: canonicalURL,
       siteName: 'Fair Explain',
       locale: 'en_US',
       images: [
         {
-          url: "pageMeta.ogImage",
+          url: "/FairExplain.svg",
           width: 1200,
           height: 630,
-          alt: 'search page',
+          alt: 'Fair Explain Search',
         },
       ],
       type: 'website',
     },
-      twitter: {
+    twitter: {
       card: 'summary_large_image',
-      title: 'Home Page',
-      description:'Welcome to the home page of our website. Explore our latest posts and updates.',
-      images: ["pageMeta.ogImage"],
+      title,
+      description,
+      images: ['/FairExplain.svg'],
     },
-    
-  }
+  };
 }

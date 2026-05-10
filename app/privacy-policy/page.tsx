@@ -152,10 +152,13 @@ export default async function PrivacyPolicy() {
 }
 
 export async function generateMetadata() {
-  const canonicalURL= `/privacy-policy`;
+  const canonicalURL = `/privacy-policy`;
+  const title = 'Privacy Policy - Fair Explain';
+  const description = 'Our commitment to protecting your privacy and managing your data with transparency.';
+  
   return {
-    title: 'Privacy Policy Page',
-    description: 'Welcome to the pricay page of our website. Explore our latest posts and updates.',
+    title,
+    description,
     alternates: {
       canonical: canonicalURL,
     },
@@ -170,27 +173,26 @@ export async function generateMetadata() {
       },
     },
     openGraph: {
-      title: "pageMeta.title",
-      description:"pageMeta.description",
+      title,
+      description,
       url: canonicalURL,
       siteName: 'Fair Explain',
       locale: 'en_US',
       images: [
         {
-          url: "pageMeta.ogImage",
+          url: "/FairExplain.svg",
           width: 1200,
           height: 630,
-          alt: 'search page',
+          alt: 'Fair Explain Privacy Policy',
         },
       ],
       type: 'website',
     },
-      twitter: {
+    twitter: {
       card: 'summary_large_image',
-      title: 'Home Page',
-      description:'Welcome to the privacy page of our website. Explore our latest posts and updates.',
-      images: ['pageMeta.ogImage'],
+      title,
+      description,
+      images: ['/FairExplain.svg'],
     },
-    
-  }
+  };
 }

@@ -241,7 +241,6 @@ export default async function PostPage({ params }: { params: PostPageParams }) {
     })}
     </CarouselContent>
     </Carousel>
-    <p className="font-roboto font-medium text-sm self-center px-2 mx-3 mt-1 py-1 bg-[#fff8f0] rounded-sm inline outline-1 outline-dashed outline-[#ff6b6b] mb-2">Updated {timeAgo} — Valid for 30 days — We will refresh it again</p>
     
     {/* The single post Body Section */}
     <SinglePost post={post} />

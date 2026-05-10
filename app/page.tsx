@@ -1,11 +1,11 @@
 // This is the Home Page
-/* eslint-disable */
 import React from 'react';
 import HomePosts from '@/components/HomePosts';
 import Pagination from '@/components/Pagination';
 import Hero from '@/components/Hero';
 import PostSchema from '@/components/PostSchema';
 import { HomePostsArchive } from '@/lib/Fetch/UniversalFetcher';
+
 export default async function HomePage() {
   let posts;
   try {
@@ -15,20 +15,17 @@ export default async function HomePage() {
     return <p className="text-center text-red-500">Failed to load posts. Please try again later.</p>;
   }
   
-  // const pageMeta = await GetPageMeta("home-page");
   const h1Tag= "Get better and quality market content";
   const paragraph = "Discover more updated and latest market content with trends to grow a business online.";
   
   const base = "page";
-  // const currentPage = posts?.meta?.pagination?.page || 1;
-  // const pageCount = posts?.meta?.pagination?.pageCount || 1;
   const myURL = process.env.NEXT_PUBLIC_SITE_URL || 'https://fairexplain.com';
   const websiteSchema= {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "url": myURL,
     "name": "Fair Explain",
-    "description": "lorem ipsum w-full mt-4 flex flex-col items-start self-start bg-whitew-full mt-4 flex flex-col items-start self-start bg-white",
+    "description": "Discover more updated and latest market content with trends to grow a business online.",
     "publisher": {
       "@type": "Organization",
       "name": "Fair Explain",
@@ -58,10 +55,6 @@ export default async function HomePage() {
 
 export async function generateMetadata() {
   const canonicalURL = `/`;
-  // const pageMeta = await GetPageMeta("home-page");
-  
-  // Ensure full URL for image (prepend domain if necessary)
-  // const ogImageURL = pageMeta.ogImage ? `https://fairexplain.com${pageMeta.ogImage}` : '/default-og-image.jpg';
   
   return {
     title: 'Home Page',
@@ -104,3 +97,4 @@ export async function generateMetadata() {
     },
   };
 }
+

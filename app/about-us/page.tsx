@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 import { CircleUser, Diamond, House, Mail, MoveRight, User } from 'lucide-react';
 
-/* eslint-disable */
 
 export default async function About() {
   const url = `${process.env.NEXT_PUBLIC_SITE_URL}/about-us`;
@@ -139,10 +138,13 @@ export default async function About() {
   );
 }
 export async function generateMetadata() {
-  const canonicalURL= `/about-us`;
+  const canonicalURL = `/about-us`;
+  const title = 'About Us - Fair Explain';
+  const description = 'Learn more about Fair Explain and our mission to provide quality market trends and insights.';
+  
   return {
-    title: 'About Page',
-    description: 'Welcome to the about page of our website. Explore our latest posts and updates.',
+    title,
+    description,
     alternates: {
       canonical: canonicalURL,
     },
@@ -157,27 +159,26 @@ export async function generateMetadata() {
       },
     },
     openGraph: {
-      title: "pageMeta.title",
-      description:"pageMeta.description",
+      title,
+      description,
       url: canonicalURL,
       siteName: 'Fair Explain',
       locale: 'en_US',
       images: [
         {
-          url: "pageMeta.ogImage",
+          url: "/FairExplain.svg",
           width: 1200,
           height: 630,
-          alt: 'search page',
+          alt: 'About Fair Explain',
         },
       ],
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Home Page',
-      description:'Welcome to the about page of our website. Explore our latest posts and updates.',
-      images: ["pageMeta.ogImage"],
+      title,
+      description,
+      images: ['/FairExplain.svg'],
     },
-    
-  }
+  };
 }

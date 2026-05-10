@@ -164,10 +164,10 @@ export default async function AuthorPage({ params, searchParams }:any) {
         </div>
         <Link
           className="mt-2 px-1 py-[1px] rounded-sm text-[#2f4858] font-semibold flex items-center gap-1 text-[15px] outline-dashed outline-[1px] outline-[#f26419]/50 hover:bg-[#d03c2f]/80 hover:text-white"
-          href={`mailto:usmanghulam546@gmail.com`}
-          aria-label={`Send an email to ${authorDetails.authorName}`}
+          href="/contact-us"
+          aria-label={`Contact ${authorDetails.authorName}`}
         >
-          <Mail className="w-[18px]" /> Email
+          <Mail className="w-[18px]" /> Contact
         </Link>
         {authorDetails.linkedin ? <Link
           className="mt-2 px-1 py-[1px] rounded-sm text-[#2f4858] font-semibold flex items-center gap-1 text-[15px] outline-dashed outline-[1px] outline-[#f26419]/50 hover:bg-[#d03c2f]/80 hover:text-white"
@@ -212,45 +212,38 @@ export default async function AuthorPage({ params, searchParams }:any) {
     </div>
   );
 } 
-export async function generateMetadata({ params,searchParams }:any) {
+export async function generateMetadata({ params, searchParams }: any) {
   const resolvedParams = await params;
   const resolvedSearch = await searchParams;
   let pageNo = 1;
   
-  // Check if the page number is valid
   if (resolvedSearch.page) {
-    const num:number|any = Number(resolvedSearch.page);
-    if (/^\d+$/.test(num) && !isNaN(num) && Number.isInteger(num) && num > 0) {
+    const num: number | any = Number(resolvedSearch.page);
+    if (/^\d+$/.test(resolvedSearch.page) && !isNaN(num) && Number.isInteger(num) && num > 0) {
       pageNo = num;
-    } else {
-      throw new Error('Invalid Page Number');
     }
   }
   
   const authorSlug = resolvedParams.authorSlug;
-  const authorPosts = await GetAuthorPosts(authorSlug, pageNo);
-  const base = `authors/${authorSlug}?page=`;
   const authorDetails = await GetAuthorDetails(authorSlug);
-  if(!authorDetails){
-    notFound()
+  if (!authorDetails) {
+    notFound();
   }
+
   const authorName = authorDetails.authorName;
   const metaDescription = authorDetails.description;
-  const homeURL = `authors/${authorSlug}`;
-  {resolvedSearch.page=='1'? redirect(`/authors/${authorSlug}`):null};
-  const title=`${authorName} - Fair Explain Author Page`
+  const myURL = process.env.NEXT_PUBLIC_SITE_URL || 'https://fairexplain.com';
   
-  const ogImage=authorDetails.avatarLink;
-  
-  const decidedUrl= pageNo==1 ? `/${homeURL}` : `/${base}${pageNo}`;
-  
-  
-  
+  const title = pageNo === 1 ? `${authorName} - Author at Fair Explain` : `${authorName} - Page ${pageNo} | Fair Explain`;
+  const decidedUrl = pageNo === 1 ? `/authors/${authorSlug}` : `/authors/${authorSlug}?page=${pageNo}`;
+  const canonicalURL = `${myURL}${decidedUrl}`;
+  const ogImage = authorDetails.avatarLink ? `${myURL}${authorDetails.avatarLink}` : `${myURL}/FairExplain.svg`;
+
   return {
     title: title,
     description: metaDescription,
     alternates: {
-      canonical: decidedUrl,
+      canonical: canonicalURL,
     },
     robots: {
       index: true,
@@ -266,15 +259,15 @@ export async function generateMetadata({ params,searchParams }:any) {
       title: title,
       description: metaDescription,
       siteName: 'Fair Explain',
-      url: decidedUrl,
-      type: 'website',
+      url: canonicalURL,
+      type: 'profile',
       locale: 'en_US',
       images: [
         {
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: 'Fair Explain Author Page',
+          alt: authorName,
         },
       ],
     },
@@ -282,7 +275,7 @@ export async function generateMetadata({ params,searchParams }:any) {
       card: 'summary_large_image',
       title: title,
       description: metaDescription,
-      images: ogImage,
+      images: [ogImage],
     },
   };
 }
