@@ -30,7 +30,7 @@ const SearchForm = (props:any) => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search Post Here..."
-        className="px-4 py-1 border-[#f26419] border-[1px] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#f26419] font-bold text-[18px] text-[#f26419] caret-[#f26419] placeholder-opacity-50 placeholder-[#50514f]"
+        className="px-4 py-1 border-[#f26419] border-[1px] rounded-md w-full focus:outline-hidden focus:ring-2 focus:ring-[#f26419] font-bold text-[18px] text-[#f26419] caret-[#f26419] placeholder-[#50514f]/50"
         aria-label="Search query"
         aria-describedby="search-helper"
       />

@@ -43,7 +43,7 @@ export default function Menu() {
 
   return (
     <div
-      className={`fixed top-0 w-full flex items-center justify-between px-2 py-[3px] bg-[#fff8f0]/20 bg-opacity-50 rounded-md z-50 font-fredokaBold transition-transform duration-300 ${
+      className={`fixed top-0 w-full flex items-center justify-between px-2 py-[3px] bg-[#fff8f0]/20 rounded-md z-50 font-inter transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >

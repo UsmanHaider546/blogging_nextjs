@@ -185,10 +185,10 @@ export default async function PostPage({ params }: { params: PostPageParams }) {
     <div className="flex items-start justify-start gap-0.5 flex-wrap">{designedTags}</div>
     
     <div className="flex justify-start items-end mt-2 ml-1 font-semibold gap-2 flex-wrap text-[12px]">
-    <div className="px-2 py-1 bg-[#fff8f0] rounded-sm outline-dashed outline-[#ff8811] outline-[1px] hover:bg-[#d03c2f] hover:text-white hover:outline-none min-w-[100px] inline-flex justify-center items-center transition-all duration-200">
+    <div className="px-2 py-1 bg-[#fff8f0] rounded-sm outline-dashed outline-[#ff8811] outline-[1px] hover:bg-[#d03c2f] hover:text-white hover:outline-hidden min-w-[100px] inline-flex justify-center items-center transition-all duration-200">
     {timeAgo}
     </div>
-    <div className="px-2 py-1 bg-[#fff8f0] rounded-sm outline-dashed outline-[#ff8811] outline-[1px] hover:bg-[#d03c2f] hover:text-white hover:outline-none min-w-[100px] inline-flex justify-center items-center transition-all duration-200">
+    <div className="px-2 py-1 bg-[#fff8f0] rounded-sm outline-dashed outline-[#ff8811] outline-[1px] hover:bg-[#d03c2f] hover:text-white hover:outline-hidden min-w-[100px] inline-flex justify-center items-center transition-all duration-200">
     {post.reading_time} Minutes Read
     </div>
     </div>
@@ -214,7 +214,7 @@ export default async function PostPage({ params }: { params: PostPageParams }) {
     width={1200}
     height={630}
     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-    className="self-center mx-auto h-full object-fit"
+    className="self-center mx-auto h-full object-cover"
     priority
     />
     </div>

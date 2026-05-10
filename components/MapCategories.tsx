@@ -24,7 +24,7 @@ export default async function MapCategories({ params }:Params|any) {
       >
         <div 
           className={`pl-2 pr-[18px] font-bold rounded-sm text-[20px]  
-            ${isActive ? 'bg-[#d03c2f] text-white' : 'bg-[#fff8f0] text-[#d03c2f] outline-dashed outline-[0.1px] outline-[#fb5607] hover:text-white hover:bg-[#3a86ff] hover:outline-none '}`}
+            ${isActive ? 'bg-[#d03c2f] text-white' : 'bg-[#fff8f0] text-[#d03c2f] outline-dashed outline-[0.1px] outline-[#fb5607] hover:text-white hover:bg-[#3a86ff] hover:outline-hidden '}`}
           aria-current={isActive ? "page" : undefined}  // Indicates the active category for screen readers
         >
           {detail.name}

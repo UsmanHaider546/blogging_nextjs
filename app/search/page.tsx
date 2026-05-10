@@ -109,7 +109,7 @@ export default async function SearchPage({ searchParams }:string|any) {
           <div className="py-8 px-4 mx-auto max-w-full lg:py-16 lg:px-6 place-self-center col-span-full">
             <div className="mx-auto max-w-screen-sm text-center flex flex-col items-center justify-center">
               <ShieldAlert className="w-[100px] h-[100px]" />
-              <h1 className="mb-4 text-4xl tracking-tight font-extrabold lg:text-5xl text-primary-600">
+              <h1 className="mb-4 text-4xl tracking-tight font-extrabold lg:text-5xl text-[#f25f5c]">
                 Not Found
               </h1>
               <p className="mb-4 text-lg font-light text-gray-500">
@@ -118,7 +118,7 @@ export default async function SearchPage({ searchParams }:string|any) {
                   <House /> home page
                 </Link>.
               </p>
-              <Link href="/" className="inline-flex text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4">
+              <Link href="/" className="inline-flex text-white bg-[#fb5607] hover:bg-[#d03c2f] focus:ring-3 focus:outline-hidden focus:ring-[#fb5607]/30 font-medium rounded-lg text-sm px-5 py-2.5 text-center my-4">
                 Back to Homepage
               </Link>
             </div>
