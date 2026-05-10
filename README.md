@@ -1,44 +1,31 @@
-<div align="center">
-  <h1>Next.js Blogging Platform</h1>
-  
-  <a href="https://youtu.be/LcVgiDSmtQ0">
-    <img src="https://img.youtube.com/vi/LcVgiDSmtQ0/maxresdefault.jpg" alt="Next.js Blogging Platform Intro Video" width="100%">
-  </a>
-  <br />
-  <p><i>A robust, SEO-optimized static blogging platform built leveraging the Next.js App Router.</i></p>
-</div>
+# Next.js Blogging Platform
 
-<br />
+[![Next.js Blogging Platform Intro Video](https://img.youtube.com/vi/LcVgiDSmtQ0/maxresdefault.jpg)](https://youtu.be/LcVgiDSmtQ0)
+
+*A robust, SEO-optimized static blogging platform built leveraging the Next.js App Router.*
 
 ## 📸 Platform Interface Gallery
 
 A visual overview of the platform's clean, minimalist, and responsive user interface.
 
 ### Home & Navigation Navigation
-<p align="center">
-  <img src="Site_Screenshots/Home_Page.webp" width="49%" alt="Home Page Dashboard">
-  <img src="Site_Screenshots/Menu_Bar.webp" width="49%" alt="Responsive Menu Bar">
-</p>
+![Home Page Dashboard](Site_Screenshots/Home_Page.webp)
+![Responsive Menu Bar](Site_Screenshots/Menu_Bar.webp)
 
 ### Content Discovery
-<p align="center">
-  <img src="Site_Screenshots/Search_Page.webp" width="49%" alt="Dynamic Search Page">
-  <img src="Site_Screenshots/Category_Page.webp" width="49%" alt="Category Archiving View">
-</p>
+![Dynamic Search Page](Site_Screenshots/Search_Page.webp)
+![Category Archiving View](Site_Screenshots/Category_Page.webp)
 
 ### Reading Experience
-<p align="center">
-  <img src="Site_Screenshots/Single_Post_Page_1.png" width="49%" alt="Single Post Top Section">
-  <img src="Site_Screenshots/Single_Post_Page_2.webp" width="49%" alt="Single Post Content Section">
-</p>
+![Single Post Top Section](Site_Screenshots/Single_Post_Page_1.png)
+![Single Post Content Section](Site_Screenshots/Single_Post_Page_2.webp)
 
 ### Authors & Information
-<p align="center">
-  <img src="Site_Screenshots/Author_Page.webp" width="49%" alt="Author Profile Page">
-  <img src="Site_Screenshots/About_Us_Page.webp" width="49%" alt="About Us Information">
-</p>
+![Author Profile Page](Site_Screenshots/Author_Page.webp)
+![About Us Information](Site_Screenshots/About_Us_Page.webp)
 
-<hr />
+---
+
 
 ## 🏗️ Technical Architecture
 
