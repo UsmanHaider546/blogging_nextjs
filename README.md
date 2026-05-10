@@ -1,62 +1,40 @@
-# Fair Explain - Blogging Platform
+# Next.js Blogging Platform
 
-Fair Explain is a modern, fast, and SEO-optimized blogging platform built with Next.js. It features a clean design, local JSON database for performance, and comprehensive schema markup for better search engine visibility.
+A robust, SEO-optimized static blogging platform built leveraging the Next.js App Router. This repository is structured to provide a fast, content-driven architecture using a localized JSON database mechanism.
 
-## Features
+## Technical Architecture
 
-- **Next.js App Router**: Built with the latest Next.js features.
-- **SEO Optimized**: Includes dynamic metadata, JSON-LD schema, and sitemap generation.
-- **Local Database**: Uses a local JSON file (`lib/localdb.json`) for content, making it easy to manage and extremely fast.
-- **Responsive Design**: Works perfectly on mobile, tablet, and desktop.
-- **Tailwind CSS**: Modern styling with a customized theme.
-- **Clean UI**: Minimalist and focused on readability.
+The application relies on Next.js static generation capabilities to serve content without requiring an external Content Management System (CMS) or database connection. All routing, layout structuring, and metadata generations are handled dynamically at build-time.
 
-## Getting Started
+### Technology Stack
 
-### Prerequisites
+* **Core:** Next.js (App Router), React, TypeScript
+* **Styling:** Tailwind CSS, Shadcn UI
+* **UI Components:** Embla Carousel (Sliders), Lucide React (Icons), Base UI
+* **Utilities:** `html-react-parser` (Content Rendering), `timeago.js` (Timestamp Formatting), `react-share` (Social Integration)
 
-- Node.js (Latest LTS recommended)
-- npm, pnpm, or yarn
+### Directory Structure
 
-### Installation
+```text
+.
+├── app/                  # Application routing, layouts, and page views
+│   ├── [categorySlug]/   # Dynamic routes for categories and posts
+│   ├── authors/          # Author profiles
+│   ├── search/           # Client-side search interface
+│   └── api/              # Internal API endpoints
+├── components/           # Reusable UI components and schemas
+├── lib/                  # Utilities and local database (`localdb.json`)
+├── public/               # Static assets (images, icons, fonts)
+└── styles/               # Global CSS and Tailwind configurations
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/blogging-nextjs.git
-   cd blogging-nextjs
-   ```
+## Configuration & Environment
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+Environment variables are defined to manage domain bindings and revalidation times. Refer to the `.env.example` file for the expected key-value pairs required in your deployment environment.
 
-3. Set up environment variables:
-   Copy `.env.example` to `.env` and adjust the values if necessary.
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Content Management
-
-Posts and categories are managed in `lib/localdb.json`. Simply update this file to add or modify content.
-
-## Deployment
-
-The easiest way to deploy is using [Vercel](https://vercel.com).
-
-1. Push your code to GitHub.
-2. Import the repository in Vercel.
-3. Configure your environment variables.
-4. Deploy!
+* `BASE_URL` / `NEXT_PUBLIC_BASE_URL`: Defines the absolute URL for canonical links and schema generation.
+* `REVALIDATE_TIME`: Controls the Incremental Static Regeneration (ISR) caching intervals.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
