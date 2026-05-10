@@ -1,7 +1,9 @@
 <div align="center">
   <h1>Next.js Blogging Platform</h1>
   
-  <video src="Site_Screenshots/Blogging_Site_Intro.webm" autoplay loop muted playsinline width="100%"></video>
+  <a href="https://youtu.be/LcVgiDSmtQ0">
+    <img src="https://img.youtube.com/vi/LcVgiDSmtQ0/maxresdefault.jpg" alt="Next.js Blogging Platform Intro Video" width="100%">
+  </a>
   <br />
   <p><i>A robust, SEO-optimized static blogging platform built leveraging the Next.js App Router.</i></p>
 </div>
@@ -14,26 +16,26 @@ A visual overview of the platform's clean, minimalist, and responsive user inter
 
 ### Home & Navigation Navigation
 <p align="center">
-  <img src="Site_Screenshots/Home_Page.png" width="49%" alt="Home Page Dashboard">
-  <img src="Site_Screenshots/Menu_Bar.png" width="49%" alt="Responsive Menu Bar">
+  <img src="Site_Screenshots/Home_Page.webp" width="49%" alt="Home Page Dashboard">
+  <img src="Site_Screenshots/Menu_Bar.webp" width="49%" alt="Responsive Menu Bar">
 </p>
 
 ### Content Discovery
 <p align="center">
-  <img src="Site_Screenshots/Search_Page.png" width="49%" alt="Dynamic Search Page">
-  <img src="Site_Screenshots/Category_Page.png" width="49%" alt="Category Archiving View">
+  <img src="Site_Screenshots/Search_Page.webp" width="49%" alt="Dynamic Search Page">
+  <img src="Site_Screenshots/Category_Page.webp" width="49%" alt="Category Archiving View">
 </p>
 
 ### Reading Experience
 <p align="center">
   <img src="Site_Screenshots/Single_Post_Page_1.png" width="49%" alt="Single Post Top Section">
-  <img src="Site_Screenshots/Single_Post_Page_2.png" width="49%" alt="Single Post Content Section">
+  <img src="Site_Screenshots/Single_Post_Page_2.webp" width="49%" alt="Single Post Content Section">
 </p>
 
 ### Authors & Information
 <p align="center">
-  <img src="Site_Screenshots/Author_Page.png" width="49%" alt="Author Profile Page">
-  <img src="Site_Screenshots/About_Us_Page.png" width="49%" alt="About Us Information">
+  <img src="Site_Screenshots/Author_Page.webp" width="49%" alt="Author Profile Page">
+  <img src="Site_Screenshots/About_Us_Page.webp" width="49%" alt="About Us Information">
 </p>
 
 <hr />
