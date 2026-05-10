@@ -62,7 +62,7 @@ export default function Menu() {
         </div>
       </Link>
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger onClick={() => setIsOpen(true)} role="button" aria-label="Open menu" title="Open menu">
+        <SheetTrigger role="button" aria-label="Open menu" title="Open menu">
           <MenuIcon className="w-[40px] h-[40px]" />
         </SheetTrigger>
         <SheetContent
