@@ -4,6 +4,7 @@ import "./globals.css";
 import localFont from 'next/font/local';
 import Footer from "@/components/Footer";
 import Menu from "@/components/Menu";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 const roboto = localFont({
   src: "../fonts/roboto-latin-wght-normal.woff2",
@@ -53,6 +54,7 @@ export default function RootLayout({
         {children}
         </main>
         <Footer />
+        <ScrollToTopButton />
         </body>
       
     </html>
